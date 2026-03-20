@@ -953,7 +953,8 @@
   .hero-section {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 5%;
+    padding: 160px 5% 2rem 5%;
+    /* Acomoda com segurança o menu móvel bem mais alto */
   }
 
   .about-mint-layout {
@@ -989,6 +990,31 @@
   .navbar {
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem 5%;
+  }
+
+  .navbar-brand-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar-partner-logos {
+    border-left: none;
+    padding-left: 0;
+    justify-content: center;
+    height: auto;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .navbar-links a {
+    white-space: nowrap;
+    /* Evita que itens do menu como 'Sobre o VITAE' quebrem linha */
+    font-size: 0.95rem;
   }
 
   .contact-logos-small img {
