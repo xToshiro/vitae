@@ -1,0 +1,997 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 100vh wrapper for Above-The-Fold content */
+.hero-viewport {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.navbar-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  height: 36px;
+}
+
+.nav-logo {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) opacity(0.65);
+  transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+  filter: brightness(0) opacity(1);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-green);
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  color: var(--primary-green);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-green);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sections General */
+.pre-title {
+  color: var(--primary-green);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 5% 1rem 5%;
+  background: linear-gradient(135deg, var(--bg-offwhite) 0%, var(--bg-white) 100%);
+  flex: 1;
+  /* Automatically stretches to push the marquee perfectly to the bottom of the viewport */
+  min-height: 0;
+  /* Ensures it can shrink if viewport is very small */
+}
+
+.hero-text-container {
+  max-width: 650px;
+}
+
+.hero-partners {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: clamp(0.5rem, 2vh, 1.5rem);
+  font-size: clamp(0.9rem, 2vh, 1.1rem);
+}
+
+.hero-partners span {
+  color: var(--text-dark);
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4vh, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: clamp(0.5rem, 2vh, 1.5rem);
+  color: var(--text-dark);
+}
+
+.text-highlight {
+  color: var(--primary-green);
+  font-size: clamp(2.5rem, 6vh, 4rem);
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2.5vh, 1.15rem);
+  color: var(--text-light);
+  margin-bottom: clamp(1rem, 3vh, 2.5rem);
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: clamp(0.7rem, 1.5vh, 0.9rem) clamp(1.2rem, 3vw, 1.8rem);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: clamp(0.9rem, 2vh, 1.05rem);
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.45);
+}
+
+.btn-secondary {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-offwhite);
+  border-color: var(--text-light);
+}
+
+.hero-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(250px, 45vh, 450px);
+  height: clamp(250px, 45vh, 450px);
+}
+
+.circle-bg {
+  width: clamp(200px, 40vh, 380px);
+  height: clamp(200px, 40vh, 380px);
+  background: linear-gradient(135deg, var(--light-green) 0%, rgba(16, 185, 129, 0.2) 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.wind-icon {
+  width: clamp(50px, 10vh, 100px);
+  height: clamp(50px, 10vh, 100px);
+  color: var(--primary-green);
+  animation: pulse 3s infinite;
+}
+
+/* Hero Marquee / Divider */
+.hero-marquee {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1.2rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  /* Prevents marquee from squishing vertically when using flex:1 in viewport wrapper */
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-item {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 2.5rem;
+}
+
+.marquee-dot {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.25rem;
+}
+
+/* About Section (Linux Mint Inspired) */
+.about-section {
+  padding: 8rem 5%;
+  background-color: var(--bg-white);
+}
+
+.about-mint-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mint-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.about-text-clean {
+  margin-bottom: 1rem;
+}
+
+.about-text-clean h2 {
+  font-size: 2.8rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.about-text-clean p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+
+.mint-card {
+  background-color: var(--bg-offwhite);
+  border-radius: 4px;
+  padding: 3rem 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.mint-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mint-card .feature-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  color: var(--primary-green);
+}
+
+.mint-card h4 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mint-card p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.card-highlight {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.card-highlight:hover {
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+.card-highlight h4,
+.card-highlight p {
+  color: white;
+}
+
+.card-highlight .feature-icon {
+  color: white;
+}
+
+/* Mini FAQ Section (Linux Mint Style) */
+.mini-faq-section {
+  background-color: #333b43;
+  /* Match screenshot dark background */
+  padding: 6rem 5%;
+  color: white;
+  text-align: center;
+}
+
+.mini-faq-header {
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+}
+
+.pre-title-mint {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #e5e7eb;
+  margin-bottom: 0.8rem;
+}
+
+.title-mint {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.subtitle-mint {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.mini-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+  text-align: left;
+}
+
+.mini-faq-item {
+  padding: 0 2rem;
+  border-right: 1px dashed rgba(255, 255, 255, 0.25);
+}
+
+.mini-faq-item:last-child {
+  border-right: none;
+}
+
+.mini-faq-item h4 {
+  font-size: 1.35rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.mini-faq-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.mini-faq-action {
+  margin-top: 2rem;
+}
+
+.btn-mint-action {
+  background-color: #55a879;
+  color: white !important;
+  border-radius: 4px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-mint-action:hover {
+  background-color: #458e65;
+}
+
+/* Cities Section with Modern Leaflet Map */
+.cities-section {
+  padding: 8rem 5%;
+  background-color: var(--bg-offwhite);
+  text-align: center;
+}
+
+.cities-intro {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.localidades-layout {
+  display: flex;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: left;
+}
+
+.map-showcase {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  flex: 2;
+  z-index: 1;
+}
+
+.localidades-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card-icon {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  line-height: 1;
+}
+
+.info-card-text h4 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-card-text p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.highlight-info-card {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: white;
+}
+
+.highlight-info-card .info-card-icon {
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-info-card .info-card-text h4,
+.highlight-info-card .info-card-text p {
+  color: white;
+}
+
+/* Leaflet Container overrides */
+.leaflet-map-override {
+  width: 100%;
+  height: 600px;
+  /* robust map height */
+  background: #111827 !important;
+  /* matches dark theme for tiles edge */
+}
+
+/* Custom Beacons rendered inside Leaflet divIcons */
+.custom-leaflet-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.beacon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* Centers the absolute content perfectly to the Leaflet anchor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.beacon-core {
+  width: 14px;
+  height: 14px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 15px var(--primary-green), 0 0 30px var(--primary-green);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.beacon:hover .beacon-core {
+  transform: scale(1.3);
+}
+
+.beacon-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(16, 185, 129, 0.5);
+  border-radius: 50%;
+  animation: radar-pulse 2.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  pointer-events: none;
+}
+
+.beacon-label {
+  position: absolute;
+  background: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  min-width: 180px;
+  text-align: left;
+  z-index: 20;
+}
+
+/* Hover effect on the label */
+.beacon:hover .beacon-label {
+  opacity: 1;
+}
+
+/* Label Positions Matrix */
+.beacon-label.left-label {
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%) translateX(10px);
+}
+
+.beacon:hover .beacon-label.left-label {
+  transform: translateY(-50%) translateX(0);
+}
+
+.beacon-label.right-label {
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.beacon:hover .beacon-label.right-label {
+  transform: translateY(-50%) translateX(0);
+}
+
+.beacon-label.bottom-label {
+  top: 25px;
+  left: 50%;
+  transform: translateY(-10px) translateX(-50%);
+}
+
+.beacon:hover .beacon-label.bottom-label {
+  transform: translateY(0) translateX(-50%);
+}
+
+/* Text styles inside the label */
+.beacon-label strong {
+  display: block;
+  color: var(--primary-green);
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.beacon-label span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+@keyframes radar-pulse {
+  0% {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 8rem 5%;
+  background-color: var(--bg-white);
+  text-align: center;
+}
+
+.faq-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.faq-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-tag {
+  background-color: var(--bg-offwhite);
+  color: var(--text-dark);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.faq-tag:hover {
+  background-color: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  border-color: var(--primary-green);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 8rem 5%;
+  background-color: #206b54;
+  /* Match screenshot green background */
+  color: white;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-white-opacity {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.pill-title {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.contact-intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.contact-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Left Column Items */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.contact-icon-box {
+  width: 65px;
+  height: 65px;
+  background-color: var(--bg-white);
+  color: #206b54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-text h4 {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-text a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Right Column Items */
+.contact-logos-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.logo-box {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.logo-box:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.logo-box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-box img {
+  max-height: 55px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Simple Footer */
+.footer-simple {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #0f172a;
+  /* Slightly darker than section background */
+  color: var(--text-light);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .about-mint-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mt-4 {
+    margin-top: 0;
+  }
+
+  .contact-two-columns {
+    gap: 3rem;
+  }
+
+  .mini-faq-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 0;
+  }
+
+  .mini-faq-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .mini-faq-item:nth-child(3) {
+    border-right: 1px dashed rgba(255, 255, 255, 0.25);
+  }
+
+  .localidades-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 5%;
+  }
+
+  .about-mint-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+  }
+
+  .mini-faq-item {
+    border-right: none !important;
+    padding: 0 1rem;
+  }
+
+  .title-mint {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .circle-bg {
+    margin-top: 2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-logos-small img {
+    max-height: 45px;
+  }
+}
